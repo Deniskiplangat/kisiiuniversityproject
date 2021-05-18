@@ -49,7 +49,7 @@ var renderMap = (googleMaps) => {
     var input = document.getElementById('searchTextField');
     var autocomplete = new googleMaps.places.Autocomplete(input, {
         types: ["geocode"],
-        componentRestrictions: { country: 'pk' }
+        componentRestrictions: { country: 'ke' }
     });
     autocomplete.bindTo('bounds', mapG);
     var infowindow = new googleMaps.InfoWindow();
@@ -77,10 +77,10 @@ var renderMap = (googleMaps) => {
 
             coordinates={[
                 {
-                    title: "Faisalabad",
+                    title: "Nairobi",
                     position: {
-                        lat: 31.4340916,
-                        lng: 73.0526164,
+                        lat: -1.286389,
+                        lng: 	36.817223,
                     },
                     onLoaded: (googleMaps, map, marker) => {
                         // Set Marker animation
@@ -91,7 +91,7 @@ var renderMap = (googleMaps) => {
 
                             content: `
                   <div>
-                    <h3>Faisalabad<h3>
+                    <h3>nairobi<h3>
                     
                   </div>
                 `,
@@ -188,7 +188,7 @@ var renderMap = (googleMaps) => {
                     },
                 }
             ]}
-            center={{ lat: 31.4340916, lng: 73.0526164 }}
+            center={{ lat: -1.286389, lng: 36.817223 }}
             zoom={15}
             onLoaded={(googleMaps, map) => {
                 map.setMapTypeId(googleMaps.MapTypeId.ROADMAP)
